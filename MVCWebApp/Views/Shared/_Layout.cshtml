@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width" />
+
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/StyleSheet.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="~/Content/js/ajaxscript.js"></script>
+</head>
+<body>
+    <header>
+       
+        <ul class="navigation">
+           
+            <li class="linavigation">
+                @Html.ActionLink("Person", "Index", "Person")
+            </li>
+            <li class="linavigation">
+                @Html.ActionLink("Ajax", "Index", "Ajax")
+            </li>
+        </ul>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <footer><p>@DateTime.Now.ToString("dddd, dd MMMM yyyy") - &copy;Abel Magicho</p></footer>
+</body>
+</html>
